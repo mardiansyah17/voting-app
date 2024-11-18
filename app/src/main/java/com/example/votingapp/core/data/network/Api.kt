@@ -1,8 +1,6 @@
 package com.example.votingapp.core.data.network
 
 import com.example.votingapp.core.data.network.dtos.PostDto
-import com.example.votingapp.core.data.network.dtos.ResourceDetailsDto
-import com.example.votingapp.core.data.network.dtos.ResourceDto
 import com.example.votingapp.core.data.network.responses.TokenResponse
 import com.example.votingapp.core.data.network.responses.UserResponse
 import retrofit2.Response
@@ -19,14 +17,13 @@ interface Api {
 
     @FormUrlEncoded
     @POST("login")
-    suspend fun postLogin(@Field("email") email: String, @Field("password") password: String): Response<TokenResponse>
+    suspend fun postLogin(
+        @Field("email") email: String,
+        @Field("password") password: String
+    ): Response<TokenResponse>
 
     @GET("users/2")
     suspend fun getUser(): Response<UserResponse>
 
-    @GET("beers")
-    suspend fun getResources(@Query("page") page: Int, @Query("per_page") limit: Int): Response<List<ResourceDto>>
 
-    @GET("beers/{id}")
-    suspend fun getResourcesDetails(@Path("id") id: Int): Response<List<ResourceDetailsDto>>
 }
