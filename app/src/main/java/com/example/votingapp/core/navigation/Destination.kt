@@ -1,8 +1,10 @@
 package com.example.votingapp.core.navigation
 
 import com.example.votingapp.R
-import com.example.votingapp.core.navigation.home.homeNavigationRoute
+import com.example.votingapp.core.navigation.pages.homeNavigationRoute
+import com.example.votingapp.core.navigation.pages.joinVotingNavigationRoute
 import com.example.votingapp.core.navigation.login.loginNavigationRoute
+import com.example.votingapp.core.navigation.pages.historyNavigationRoute
 import com.example.votingapp.core.navigation.register.registerNavigationRoute
 import com.example.votingapp.core.ui.AppIcons
 import com.example.votingapp.core.ui.Icon
@@ -35,6 +37,16 @@ enum class Destination(
         titleTextId = R.string.home,
         route = homeNavigationRoute
     ),
+    HISTORY(
+        isTopLevelDestination = true,
+        isBottomBarTab = true,
+        isTopBarTab = true,
+        selectedIcon = Icon.DrawableResourceIcon(AppIcons.History),
+        unselectedIcon = Icon.DrawableResourceIcon(AppIcons.History),
+        iconTextId = R.string.history,
+        titleTextId = R.string.history,
+        route = historyNavigationRoute
+    ),
 
     LOGIN(
         isTopLevelDestination = true,
@@ -50,6 +62,16 @@ enum class Destination(
         isTopBarTab = false,
         titleTextId = R.string.register,
         route = registerNavigationRoute
+    ),
+    JOIN(
+        isTopLevelDestination = true,
+        isBottomBarTab = false,
+        isTopBarTab = true,
+        selectedIcon = Icon.DrawableResourceIcon(AppIcons.Home),
+        unselectedIcon = Icon.DrawableResourceIcon(AppIcons.HomeBorder),
+        iconTextId = R.string.home,
+        titleTextId = R.string.join_voting,
+        route = joinVotingNavigationRoute
     );
 
 
