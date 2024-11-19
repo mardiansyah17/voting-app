@@ -80,7 +80,8 @@ class AppState(
             Destination.HOME -> navController.navigateToHome(topLevelNavOptions)
             Destination.LOGIN -> navController.navigateToLogin(topLevelNavOptions)
             Destination.REGISTER -> navController.navigateToRegister(topLevelNavOptions)
-
+            Destination.JOIN -> navController.navigateToJoinVoting(topLevelNavOptions)
+            Destination.HISTORY -> navController.navigateToHistory(topLevelNavOptions)
         }
 
     }
