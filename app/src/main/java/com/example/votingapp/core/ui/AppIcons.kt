@@ -16,6 +16,7 @@ object AppIcons {
     val Add = Icons.Rounded.Add
     val ArrowBack = Icons.Rounded.ArrowBack
     val ArrowDropDown = Icons.Rounded.ArrowDropDown
+    val History = R.drawable.ic_baseline_history
     val Home = R.drawable.ic_home
     val HomeBorder = R.drawable.ic_home_border
     val Resources = R.drawable.ic_resources
